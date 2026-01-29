@@ -186,6 +186,7 @@ footer {
 }
 #arrow{
     transition: 0.5s ease-in-out;
+    transform: scale(0.8);
 }
 .arcanes{
     display: flex;
