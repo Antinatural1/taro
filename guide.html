@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/jquery3.7.1.js"></script>
+    <title>Значения и трактовка карт</title>
+    <meta name="description" content="Каждая карта имеет своё уникальное значение. Всего в колоде содержится 78 карт.
+    Высшие Арканы — это 22 карты, отражающие ключевые этапы жизни, духовные вызовы и трансформации. Оставшиеся — это Низшие Арканы,
+    раскрывающие детали повседневной жизни. Каждая карта — это не просто символ, а зеркало вашей души."/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="keywords" content="трактовка карт таро, значение карт таро, арканы таро, перевёрнутые карты таро"/>
+    <link rel="canonical" href="index.html"/>
+    <link rel="shortcut icon" href="img/Logo.svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="img/Logo.svg" alt="" class="logo">
+        <a href="index.html" class="header-nav">Главная</a>
+        <a href="guide.html" class="header-nav header-nav-active">Карты и их значения</a>
+        <a href="buy.html" class="header-nav">Купить таро</a>
+    </header>
+    <main>
+        <h1>Трактовка карт Таро: раскройте тайный смысл каждого аркана</h1>
+        <p class="main-block-text marg">Каждая карта Таро — это ключ к пониманию себя, окружающего мира и скрытых возможностей.
+             Здесь вы найдёте подробные, но простые для восприятия разъяснения значений всех 78 карт колоды Уэйта — от Высших 
+             Арканов, символизирующих глубинные жизненные уроки, до Низших, которые раскрывают детали повседневных ситуаций.</p>
+        <div class="arcanes">
+            <h2>Старшие Арканы</h2>
+            <button class="arrow" onclick="fall()"><img src="./img/arrow.svg" alt="arrow-down" id="arrow"></button>
+        </div>
+        <div class="high-arcanes">
+            <p class="main-block-text marg">Высшие Арканы — это 22 карты, отражающие ключевые этапы жизни, духовные вызовы и трансформации.
+                 Их послания помогают понять суть происходящего и найти правильный путь. Каждая карта — это не просто символ, а зеркало вашей души.</p>
+            <div class="search-container">
+                <input type="text" id="tarot-search" placeholder="Поиск карты по названию или номеру..." class="search-input">
+                <div class="search-results-info" id="search-results"></div>
+            </div>
+            <div class="guide-cards" id="tarot-cards-container">
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/fool.png" alt="Шут" class="card-img" loading="lazy">
+                        <p class="card-title">0 Шут</p>
+                    </div>
+                    <p class="card-text">Карта инфантилизма. Указывает на то, что ваши действия необдуманные и нелогичные, потому вы не можете достичь цели. В перевёрнутом виде говорит о конце периода неизвестности о обретение чётких целей. В любовном раскладе карта говорит о лёгких и непринуждённых отношениях</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/magician.png" alt="Маг" class="card-img" loading="lazy">
+                        <p class="card-title">I Маг</p>
+                    </div>
+                    <p class="card-text">Символизирует начало нового периода в жизни, благоприятное и перспективное начало дел. Если при раскладе карта выпала в перевёрнутом виде, то возможны препятствия в делах. В любовном раскладе карта показывает нового молодого человека</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/highpriestess.png" alt="Верховная жрица" class="card-img" loading="lazy">
+                        <p class="card-title">II Верховная жрица</p>
+                    </div>
+                    <p class="card-text">Время благоприятное для обучения, познания нового, переквалификации, развития в своей сфере. В перевёрнутом виде указывает на достаточное количество знаний для дальнейших действий. В любовном раскладе карта означает недомолвки</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/empress.png" alt="Императрица" class="card-img" loading="lazy">
+                        <p class="card-title">III Императрица</p>
+                    </div>
+                    <p class="card-text">Благополучная карта во всех сферах, говорит о благополучном периоде для начала нового дела или отношений. В перевёрнутом виде говорит о затруднительном положении. В любовном раскладе означает заключение союза, семью</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/emperor.png" alt="Император" class="card-img" loading="lazy">
+                        <p class="card-title">IV Император</p>
+                    </div>
+                    <p class="card-text">Важный авторитетный человек, возможно начальник. Означает повышение по службе или что нужно обратиться за помощью к такому человеку, чтобы уладить свою проблему. В перевёрнутом виде означает разрушение планов, смену власти. В любовном раскладе говорит о наличии богатого покровителя.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/hierophant.png" alt="Верховный жрец" class="card-img" loading="lazy">
+                        <p class="card-title">V Верховный жрец</p>
+                    </div>
+                    <p class="card-text">Нахождение нужных связей через духовную взаимопомощь. В перевёрнутом виде карта предупреждает об отступлении от веры, предупреждает обман. В любовном раскладе карта указывает на духовну близость, дружбу.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/lovers.png" alt="Любовники" class="card-img" loading="lazy">
+                        <p class="card-title">VI Любовники</p>
+                    </div>
+                    <p class="card-text">Карта говорит о скором выборе, который вам придётся сделать и который повлечёт перемены в лучшую сторону. В перевёрнутом виде возможна любовь на стороне, ревность, недовольство отношениями. В любовном раскладе означает сильную взаимную любовь.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/chariot.png" alt="Колесница" class="card-img" loading="lazy">
+                        <p class="card-title">VII Колесница</p>
+                    </div>
+                    <p class="card-text">Сейчас необходимо взять себя в руки и положить все силы на активные действия, которые приведут вас к прорыву в делах. В перевёрнутом виде означает приостановку конфликта, либо передышку. В любовном раскладе говорит о разном характере, несовместимости, но тяге друг к другу</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/justice.png" alt="Справедливость" class="card-img" loading="lazy">
+                        <p class="card-title">VIII Справедливость</p>
+                    </div>
+                    <p class="card-text">Одна из кармических карт. Если вы вели дела честно, то вам улыбнётся удача и справедливость встанет на вашу сторону. Если вы повели себя нечестно, то придётся отвечать за свои действия. Также показывает официализацию отношений, договора, трудоустройство. В перевёрнутом виде означает затягивание проблемы, долго не будет решения. В любовном раскладе означает важные решения документального уровня.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/hermit.png" alt="Отшельник" class="card-img" loading="lazy">
+                        <p class="card-title">IX Отшельник</p>
+                    </div>
+                    <p class="card-text">Довольство малым, карта указывает на период в жизни, когда нужно немного побыть наедине со своими мыслями. В перевёрнутом виде означает, что вы слишком отстранены от окружающих. В любовном раскладе указывает на невозможность гармоничных отношений.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/wheeloffortune.png" alt="Колесо судьбы" class="card-img" loading="lazy">
+                        <p class="card-title">X Колесо судьбы</p>
+                    </div>
+                    <p class="card-text">Вас ждут счастливые события, либо везение. В перевёрнутом виде означает рутину и продолжение существующей обстановки. В любовном раскладе указывает на приятные встречи.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/strength.png" alt="Сила" class="card-img" loading="lazy">
+                        <p class="card-title">XI Сила</p>
+                    </div>
+                    <p class="card-text">Очень сильная карта, которая говорит, что у вас достаточно сил осуществить задуманное. Перед вами открываются двери возможностей и белая полоса в жизни. В перевёрнутом виде означает дисгармонию в жизни, потерю сил и энергии. В любовном раскладе карта указывает на гармоничные счастливые отношения, построенные на уважении и любви.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/hangedman.png" alt="Повешенный" class="card-img" loading="lazy">
+                        <p class="card-title">XII Повешенный</p>
+                    </div>
+                    <p class="card-text">Тяжёлый период времени, который необходимо пережить. В перевёрнутом виде говорит о потере сил и энергии. В любовном раскладе говорит об угнетающих отношениях.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/death.png" alt="Смерть" class="card-img" loading="lazy">
+                        <p class="card-title">XIII Смерть</p>
+                    </div>
+                    <p class="card-text">Перемены, кардинальная смена событий. В перевёрнутом виде означает, что новая жизнь пока что невозможна. В любовном раскладе означает нехватку времени на отношения.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/temperance.png" alt="Умеренность" class="card-img" loading="lazy">
+                        <p class="card-title">XIV Умеренность</p>
+                    </div>
+                    <p class="card-text">Карта указывает, что не нужно действовать по прежним стандартам, а продумывать всё до мелочей. В перевёрнутом виде предупреждает об ошибках. В любовном раскладе означает однообразие в отношениях.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/devil.png" alt="Дьявол" class="card-img" loading="lazy">
+                        <p class="card-title">XV Дьявол</p>
+                    </div>
+                    <p class="card-text">Соблазн либо искушение. Одна из самых неоднозначных карт в колоде, говорит о соблазнительном предложении, но возможно против личных убеждений или закона. В перевёрнутом виде означает расплату за содеянное. В любовном раскладе означает физическое желание либо измену.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/tower.png" alt="Башня" class="card-img" loading="lazy">
+                        <p class="card-title">XVI Башня</p>
+                    </div>
+                    <p class="card-text">Кармическая карта в колоде, которая всегда говорит о том, что пришло время для трансформации черезь боль и разочарования. Следует подчиниться переменам и использовать эту возможность для роста и изменения жизни к лучшему в будущем. В перевёрнутом виде означает душевные расстройства. В любовном раскладе говорит о разрыве отношений.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/star.png" alt="Звезда" class="card-img" loading="lazy">
+                        <p class="card-title">XVII Звезда</p>
+                    </div>
+                    <p class="card-text">Перед вами открываются большие возможности и перспективы. Ваша задача не сидеть без дела и не упустить свою звезду из рук. В перевёрнутом виде означает, что вы не сможете воспользоваться возможностями, которые вам дали. В любовном раскладе указывает на потенциал к развитию отношений</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/moon.png" alt="Луна" class="card-img" loading="lazy">
+                        <p class="card-title">XVIII Луна</p>
+                    </div>
+                    <p class="card-text">Карта указывает на неопределённость во всех сферах , будь то отношения либо работа. Предупреждает об опасности, нужно смотреть рядом стоящие карты, чтобы понять откуда её ждать. В перевёрнутом виде указывает на прояснение ситуации, раскрытие обмана или заговора. В любовном раскладе означает иллюзию счастливых отношений, обман</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/sun.png" alt="Солнце" class="card-img" loading="lazy">
+                        <p class="card-title">XIX Солнце</p>
+                    </div>
+                    <p class="card-text">Карта счастья и исполнения желаний, все ваши мечты начинают сбываться. В перевёрнутом виде карта означает радостные события, но недостаточные, чтобы человек почувствовал себя счастливым. В любовном раскладе означает семейное счастье и появление детей.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/judgement.png" alt="Суд" class="card-img" loading="lazy">
+                        <p class="card-title">XX Суд</p>
+                    </div>
+                    <p class="card-text">Кризис в разных сферах, необходимость продумывать свои действия. Кармическая карта, во многих раскладах указывает на расплату за деяния. В перевёрнутом виде указывает на затягивание проблемы и незнание выхода из неё. В любовном раскладе говорит об узаконивании отношений, либо наоборот о расторжении</p>
+                </div>
+                <div class="guide-card">
+                    <div class="card">
+                        <img src="img/world.png" alt="Мир" class="card-img" loading="lazy">
+                        <p class="card-title">XXI Мир</p>
+                    </div>
+                    <p class="card-text">Карта говорит о множестве возможностей, которые будут вас окружать в ближайшее время. В перевёрнутом виде говорит о необходимости обучения, переквалификации. В любовном раскладе у вас открываются новые возможности, возможно жених из-за границы</p>
+                </div>
+            </div>
+        </div>
+        <h2>Младшие Арканы</h2>
+        <div class="marg">
+            <p class="main-block-text">Низшие Арканы делятся на четыре масти, каждая из которых отвечает за свою сферу жизни:</p>
+            <div class="main-fux2">
+                <li class="main-block-text2">Пентакли — деньги, работа, материальный мир, здоровье.</li>
+                <li class="main-block-text2">Мечи — разум, конфликты, решения, интеллект. </li>
+                <li class="main-block-text2">Жезлы — творчество, страсть, карьера, энергия</li>
+                <li class="main-block-text2">Кубки — эмоции, любовь, отношения, интуиция.</li>
+            </div>
+            <p class="main-block-text">Эти карты помогают разобраться в мелочах, которые формируют вашу реальность.</p>
+        </div>
+        <div class="guide-table">
+            <div class="guide-table-text">Масть</div>
+            <div class="guide-table-text">Мечи</div>
+            <div class="guide-table-text">Кубки</div>
+            <div class="guide-table-text">Жезлы</div>
+            <div class="guide-table-text">Пентакли</div>
+            <div class="guide-table-text">Сфера влияния</div>
+            <div class="guide-table-text">Мысли</div>
+            <div class="guide-table-text">Чувства</div>
+            <div class="guide-table-text">Действия</div>
+            <div class="guide-table-text">Материальные ресурсы</div>
+            <div class="guide-table-text">2</div>
+            <div class="guide-table-text">Безвыходное положение</div>
+            <div class="guide-table-text">Привлекательность</div>
+            <div class="guide-table-text">Энергичность</div>
+            <div class="guide-table-text">Забава</div>
+            <div class="guide-table-text">3</div>
+            <div class="guide-table-text">Предательство</div>
+            <div class="guide-table-text">Объединение</div>
+            <div class="guide-table-text">Лидерство</div>
+            <div class="guide-table-text">Труд</div>
+            <div class="guide-table-text">4</div>
+            <div class="guide-table-text">Созерцание</div>
+            <div class="guide-table-text">Меланхолия</div>
+            <div class="guide-table-text">Свобода</div>
+            <div class="guide-table-text">Управление</div>
+            <div class="guide-table-text">5</div>
+            <div class="guide-table-text">Разногласие</div>
+            <div class="guide-table-text">Сожаление</div>
+            <div class="guide-table-text">Соперничество</div>
+            <div class="guide-table-text">Неприятные события</div>
+            <div class="guide-table-text">6</div>
+            <div class="guide-table-text">Путешествие</div>
+            <div class="guide-table-text">Невинность</div>
+            <div class="guide-table-text">Триумф</div>
+            <div class="guide-table-text">Энергичность</div>
+            <div class="guide-table-text">7</div>
+            <div class="guide-table-text">Побег от ответственности</div>
+            <div class="guide-table-text">Иллюзии</div>
+            <div class="guide-table-text">Приговор</div>
+            <div class="guide-table-text">Награда</div>
+            <div class="guide-table-text">8</div>
+            <div class="guide-table-text">Ограничение</div>
+            <div class="guide-table-text">Усталость</div>
+            <div class="guide-table-text">Активные дествия</div>
+            <div class="guide-table-text">Похвала</div>
+            <div class="guide-table-text">9</div>
+            <div class="guide-table-text">Мучение</div>
+            <div class="guide-table-text">Удовольствие</div>
+            <div class="guide-table-text">Защита</div>
+            <div class="guide-table-text">Самоуверенность</div>
+            <div class="guide-table-text">10</div>
+            <div class="guide-table-text">Жертвенность</div>
+            <div class="guide-table-text">Семья</div>
+            <div class="guide-table-text">Борьба</div>
+            <div class="guide-table-text">Изобилие</div>
+            <div class="guide-table-text">Паж</div>
+            <div class="guide-table-text">Искренность</div>
+            <div class="guide-table-text">Кавалер</div>
+            <div class="guide-table-text">Уверенность</div>
+            <div class="guide-table-text">Рост</div>
+            <div class="guide-table-text">Рыцарь</div>
+            <div class="guide-table-text">Бесчувственность</div>
+            <div class="guide-table-text">Романтические отношения</div>
+            <div class="guide-table-text">Храбрость</div>
+            <div class="guide-table-text">Карьеризм</div>
+            <div class="guide-table-text">Королева</div>
+            <div class="guide-table-text">Опасность</div>
+            <div class="guide-table-text">Помощь</div>
+            <div class="guide-table-text">Честность</div>
+            <div class="guide-table-text">Обучение</div>
+            <div class="guide-table-text">Король</div>
+            <div class="guide-table-text">Власть</div>
+            <div class="guide-table-text">Мудрость</div>
+            <div class="guide-table-text">Смелость</div>
+            <div class="guide-table-text">Устойчивое положение</div>
+            <div class="guide-table-text">Туз</div>
+            <div class="guide-table-text">Сила</div>
+            <div class="guide-table-text">Близость</div>
+            <div class="guide-table-text">Доверие</div>
+            <div class="guide-table-text">Процветание</div>
+        </div>
+        <div class="main-block main-block3">
+            <p class="main-block-text">Ещё больше интересных раскладов в наших социальных сетях</p>
+            <div class="soc">
+                    <a href="https://t.me/taroIPEK" target="_blank" rel="noopener noreferrer nofollow"><img src="./img/telegram.svg" alt="telegram" class="soc-img"></a>
+                    <a href="https://www.tiktok.com/@horny.lustick?_r=1&_t=ZS-93SYgFTdT5o" target="_blank" rel="noopener noreferrer nofollow"><img src="./img/tiktok.svg" alt="tiktok" class="soc-img"></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer-text">© Все права защищены<br>
+            Копирование без разрешения запрещено</p>
+    </footer>
+    <script>
+        let cof = true;
+        function fall(){
+            if (cof){
+                $('.high-arcanes').fadeOut(500);
+                $('#arrow').css("rotate","180deg")
+                cof = false;
+            }
+            else{
+                $('.high-arcanes').fadeIn(500);
+                $('#arrow').css("rotate","360deg")
+                cof = true;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('tarot-search');
+            const cardsContainer = document.getElementById('tarot-cards-container');
+            const searchResultsInfo = document.getElementById('search-results');
+            const cards = document.querySelectorAll('.guide-card');
+            
+            // Сохраняем оригинальный HTML для сброса подсветки
+            const originalCardsHTML = [];
+            cards.forEach(card => {
+                originalCardsHTML.push(card.innerHTML);
+            });
+            
+            // Функция для нормализации текста (удаление лишних пробелов, приведение к нижнему регистру)
+            function normalizeText(text) {
+                return text.toLowerCase().replace(/\s+/g, ' ').trim();
+            }
+            
+            // Функция для поиска и фильтрации карт
+            function filterCards() {
+                const searchTerm = normalizeText(searchInput.value);
+                let visibleCount = 0;
+                
+                // Если поле поиска пустое, показываем все карты
+                if (!searchTerm) {
+                    cards.forEach((card, index) => {
+                        card.classList.remove('hidden');
+                        card.innerHTML = originalCardsHTML[index]; // Сбрасываем подсветку
+                    });
+                    searchResultsInfo.textContent = 'Все карты отображены';
+                    return;
+                }
+                
+                // Фильтрация карт
+                cards.forEach((card, index) => {
+                    const cardTitle = card.querySelector('.card-title').textContent;
+                    const cardContent = normalizeText(cardTitle);
+                    
+                    // Проверяем, содержит ли карта искомый текст
+                    if (cardContent.includes(searchTerm)) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                        
+                        // Подсветка найденного текста в названии
+                        const titleElement = card.querySelector('.card-title');
+                        const originalTitle = titleElement.textContent;
+                        const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+                        
+                        // Восстанавливаем оригинальный HTML перед новой подсветкой
+                        card.innerHTML = originalCardsHTML[index];
+                        
+                        // Применяем подсветку
+                        const newTitle = originalTitle.replace(regex, '<span class="highlight">$1</span>');
+                        card.querySelector('.card-title').innerHTML = newTitle;
+                        
+                        } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                
+                // Показываем информацию о результатах поиска
+                if (visibleCount === 0) {
+                    searchResultsInfo.textContent = 'Карты не найдены. Попробуйте другой запрос.';
+                } else if (visibleCount === 1) {
+                    searchResultsInfo.textContent = 'Найдена 1 карта';
+                } else {
+                    searchResultsInfo.textContent = `Найдено карт: ${visibleCount}`;
+                }
+            }
+            
+            // Обработчик события ввода
+            searchInput.addEventListener('input', filterCards);
+            
+            // Обработчик события нажатия клавиши Enter
+            searchInput.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    filterCards();
+                }
+            });
+            
+            // Обработчик для очистки поиска при клике на крестик (если поддерживается браузером)
+            searchInput.addEventListener('search', function() {
+                if (!this.value) {
+                    filterCards();
+                }
+            });
+            
+            // Инициализация
+            searchResultsInfo.textContent = 'Все карты отображены';
+        });
+</script>
+</body>
+</html>
