@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap:
+Sitemap: https://taro-beta-gules.vercel.app/sitemap.xml
